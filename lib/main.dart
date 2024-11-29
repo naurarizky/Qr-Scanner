@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:qr_scanner/splash_screen.dart';
 
 void main() {
-  runApp(const QrScannerApp());
+  runApp(const QrScanner());
 }
 
-class QrScannerApp extends StatelessWidget {
-  const QrScannerApp({super.key});
+class QrScanner extends StatelessWidget {
+  const QrScanner({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "QR Scanner App",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
-        useMaterial3: true
+        primaryColor: const Color.fromARGB(255, 255, 255, 255), // Warna oranye 
       ),
+      home: const SplashScreen(),
     );
   }
 }
